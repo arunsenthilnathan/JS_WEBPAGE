@@ -10,7 +10,7 @@ html {
 
 header {
     min-height: 15vh;
-    background-color: slategray;
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
