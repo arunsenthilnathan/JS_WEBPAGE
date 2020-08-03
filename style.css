@@ -48,7 +48,7 @@ header {
     padding: 45px 45px; 
     border-radius: 50%;
     background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
-    transition: 1s ease-in;
+    transition: .4s ease-in;
     color: yellow;
     z-index: -1;
 }
