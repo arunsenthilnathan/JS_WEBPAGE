@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-<script type="text/javascript" src="app.js"></script>
-    </script>
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@600&family=Shadows+Into+Light&display=swap"
         rel="stylesheet">
     <title>Document</title>
@@ -26,7 +24,7 @@
                 <li><a class="nav-anchor" href="#">Contact</a></li>
             </ul>
         </nav>
-        <div class="burger">
+        <div class="burger" id="bur">
 
             <div></div>
             <div></div>
@@ -45,10 +43,12 @@
     <footer>
         <h2> &copy; being develope by senthar</h2>
     </footer>
-
-    <script>
-        
-    </script>
 </body>
-
+<script>
+    const burger = document.querySelector("#bur");
+const navlink = document.querySelector(".navlinks");
+burger.addEventListener("click", () => {
+    navlink.classList.toggle("navopen");
+});
+</script>
 </html>
