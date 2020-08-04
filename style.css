@@ -86,11 +86,11 @@ footer {
     background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:600px) {
     header {
         display: grid;
         grid-template-columns: 4fr 1fr;
-        grid-template-areas: "g-logo g-burger";
+        grid-template-areas: "g-logo g-burger ";
         min-height: 25rem;
         background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     }
@@ -110,21 +110,41 @@ footer {
         grid-area: g-burger;
         margin-top: auto;
         margin-bottom: auto;
-        width:30%;
+        width: 30%;
         margin-left: auto;
         margin-right: auto;
-        cursor: context-menu;
-
+        cursor: pointer;
+        clip-path: circle(#13547a .4rem);
+        z-index: 2;
     }
-.burger div{
-    background-color: white;
-    padding-top: .4rem;
-    margin-top: .4rem;
-}
-
+    .burger div {
+        background-color: white;
+        padding-top: .4rem;
+        margin-top: .4rem;
+    }
     .navlinks {
-        display: flex;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        background-color: #13547a;
+        clip-path: circle(100px at 90% -20%);
+        -webkit-clip-path: circle(100px at 90% -20%);
+        transition: all 1s ease-out;
     }
 
+    .navopen{
+        clip-path: circle(1000px at 90% -20%);
+        -webkit-clip-path: circle(1000px at 90% -20%);
 
+    }
+
+    .navlinks ul {
+        display: flex;
+        flex-direction: column;
+    margin-top: 10px;
+    }
+    .navlinks ul li {
+        top: 50px;
+        padding: 80px 5px;
+    }
 }
