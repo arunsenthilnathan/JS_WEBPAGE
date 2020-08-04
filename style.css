@@ -53,13 +53,7 @@ header {
     text-align: center;
 }
 
-.navlinks ul li a:hover {
-    padding: 1.5rem 1.5rem;
-    border-radius: 50%;
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-    transition: .3s ease;
-    z-index: -1;
-}
+
 
 section {
     width: 100%;
@@ -114,7 +108,6 @@ footer {
         margin-left: auto;
         margin-right: auto;
         cursor: pointer;
-        clip-path: circle(#13547a .4rem);
         z-index: 2;
     }
     .burger div {
@@ -147,4 +140,5 @@ footer {
         top: 50px;
         padding: 80px 5px;
     }
+    
 }
