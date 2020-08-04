@@ -123,6 +123,8 @@ footer {
 }
 
     .navlinks {
-        display: none;
+        display: flex;
     }
+
+
 }
