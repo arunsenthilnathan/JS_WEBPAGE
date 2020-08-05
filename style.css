@@ -63,7 +63,7 @@ header {
 
 .home {
     width: 100%;
-    min-height: 700px;
+    min-height:70rem;
     height: auto;
     color: rgb(60, 2, 102);
 }
@@ -80,7 +80,7 @@ header {
 .about {
     width: 100%;
     display: block;
-    min-height: 700px;
+    min-height: 70rem;
     background-color: cornsilk;
     justify-content: space-around;
     text-align: center;
