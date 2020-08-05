@@ -59,6 +59,8 @@
     const footer = document.querySelector("footer");
     burger.addEventListener("click", () => {
         navlink.classList.toggle("navopen");
+        var vvopen = navlink.className;
+        console.log("hey" + vvopen);
         console.log(line.classList);
         console.log(navlink.className);
         links.forEach(link => {
@@ -81,24 +83,45 @@
     });
 
     function scrools(positions) {
+        if (navlink.className == "navlinks navopen"){
+            navlink.classList.remove("navopen");
+            links.forEach(link => {
+            link.classList.remove("fade");
+        });
+    
+        line.forEach((lines, index) => {
+            if (index == 0) {
+                lines.classList.remove("burgerfade");
+            }
+            else if (index == 1) {
+                lines.classList.remove("burgerfade1");
+            }
+            else if (index == 2) {
+                lines.classList.remove("burgerfade2");
+            };
+        });
+    }
+        else
+            console.log("hello");
+
         setTimeout(function () {
             window.scroll({
-                left:0,
-                top:positions,
-                behavior:"smooth"
+                left: 0,
+                top: positions,
+                behavior: "smooth"
             })
         }, 2);
         console.log(positions);
     };
     anchorlink.forEach(alink => {
         alink.addEventListener("click", () => {
+
             if (alink.id == "a-home") {
                 scrools(alink.getBoundingClientRect.top);
-                console.log(header.getBoundingClientRect());
             }
             else if (alink.id == "a-about") {
                 scrools(section.getBoundingClientRect().top);
-                console.log(section.getBoundingClientRect());
+
             }
             else if (alink.id == "a-contact") {
                 scrools(footer.getBoundingClientRect().top);
