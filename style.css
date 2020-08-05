@@ -150,14 +150,14 @@ footer {
         opacity: 1;
     }
     .burgerfade {
-        transform: rotate(45deg) translate(5px, 6px);
+        transform: rotate(-45deg) translate(-5px, 6px);
         transition: .1s ease;
     }
     .burgerfade1 {
         opacity: 0;
     }
     .burgerfade2 {
-        transform: rotate(-45deg) translate(5px, -6px);
+        transform: rotate(45deg) translate(-5px, -6px);
         transition: .1s ease;
     }
 }
