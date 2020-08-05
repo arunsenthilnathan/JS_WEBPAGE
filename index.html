@@ -57,18 +57,13 @@
     const header = document.querySelector(".home");
     const section = document.querySelector(".about");
     const footer = document.querySelector("footer");
+
+    
     burger.addEventListener("click", () => {
         navlink.classList.toggle("navopen");
-        var vvopen = navlink.className;
-        console.log("hey" + vvopen);
-        console.log(line.classList);
-        console.log(navlink.className);
         links.forEach(link => {
             link.classList.toggle("fade");
         });
-
-
-
         line.forEach((lines, index) => {
             if (index == 0) {
                 lines.classList.toggle("burgerfade");
@@ -81,29 +76,30 @@
             };
         });
     });
-
-    function scrools(positions) {
-        if (navlink.className == "navlinks navopen"){
+    function clearanimi() {
+        if (navlink.className == "navlinks navopen") {
             navlink.classList.remove("navopen");
             links.forEach(link => {
-            link.classList.remove("fade");
-        });
-    
-        line.forEach((lines, index) => {
-            if (index == 0) {
-                lines.classList.remove("burgerfade");
-            }
-            else if (index == 1) {
-                lines.classList.remove("burgerfade1");
-            }
-            else if (index == 2) {
-                lines.classList.remove("burgerfade2");
-            };
-        });
-    }
-        else
-            console.log("hello");
+                link.classList.remove("fade");
+            });
 
+            line.forEach((lines, index) => {
+                if (index == 0) {
+                    lines.classList.remove("burgerfade");
+                }
+                else if (index == 1) {
+                    lines.classList.remove("burgerfade1");
+                }
+                else if (index == 2) {
+                    lines.classList.remove("burgerfade2");
+                };
+            });
+        }
+    };
+
+
+    function scrools(positions) {
+        clearanimi();
         setTimeout(function () {
             window.scroll({
                 left: 0,
@@ -111,7 +107,6 @@
                 behavior: "smooth"
             })
         }, 2);
-        console.log(positions);
     };
     anchorlink.forEach(alink => {
         alink.addEventListener("click", () => {
@@ -130,6 +125,13 @@
         });
 
     });
+    window.addEventListener("scroll",() =>{
+        if (document.documentElement.scrollTop>265)
+        clearanimi();
+    });
+
+    
+
 
 
 
