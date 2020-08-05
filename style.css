@@ -69,8 +69,9 @@ section {
 }
 
 footer {
-    max-height: 8vh;
-    height: 8vh;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: space-around;
     text-align: center;
     padding: 20px 0px;
     background-color: #13547a;
