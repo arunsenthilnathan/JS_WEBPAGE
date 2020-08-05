@@ -17,8 +17,6 @@ header {
 }
 
 .logo {
-    margin-top: auto;
-    margin-bottom: auto;
     padding-left: 3rem;
     color: whitesmoke;
     font-size: 2.0rem;
@@ -144,11 +142,7 @@ footer {
         transition: all .4s ease .4s;
     }
     .navlinks li:nth-child(3) {
-<<<<<<< HEAD
-        transition: all .5s ease .6s;
-=======
         transition: all .4s ease .6s;
->>>>>>> 57e236d67075d0b087e1efad89f7e1b9cb4e5f73
     }
     li.fade {
         opacity: 1;
