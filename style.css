@@ -56,6 +56,7 @@ section {
     min-height: 700px;
     height: auto;
     color: rgb(60, 2, 102);
+}
 
 .message {
     font-size: 2.1rem;
@@ -72,6 +73,7 @@ footer {
     text-align: center;
     padding: 20px 0px;
     background-image:Black;
+}
 
 @media screen and (max-width:600px) {
     header {
