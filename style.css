@@ -6,6 +6,13 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    height: 100%;
 }
 
 header {
@@ -15,6 +22,8 @@ header {
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
     grid-template-areas: "g-logo none g-nav";
+    position: sticky;
+    top: 0;
 }
 
 .logo {
@@ -52,7 +61,7 @@ header {
     text-align: center;
 }
 
-section {
+.home {
     width: 100%;
     min-height: 700px;
     height: auto;
@@ -68,6 +77,20 @@ section {
     text-align: center;
 }
 
+.about {
+    width: 100%;
+    display: block;
+    min-height: 700px;
+    background-color: cornsilk;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 2.1rem;
+    padding-top: 20rem;
+}
+
 footer {
     height: 2.5rem;
     align-items: center;
@@ -76,7 +99,7 @@ footer {
     padding: 20px 0px;
     background-color: #13547a;
     border-top: black solid .2rem;
-    color : White;
+    color: White;
 }
 
 @media screen and (max-width:600px) {
@@ -86,6 +109,7 @@ footer {
         grid-template-areas: "g-logo g-burger ";
         min-height: 25rem;
         background-color: #13547a;
+        position: relative;
     }
     .logo {
         margin-top: auto;

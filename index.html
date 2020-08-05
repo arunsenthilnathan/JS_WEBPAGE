@@ -19,9 +19,9 @@
 
         <nav class="navlinks">
             <ul>
-                <li><a class="nav-anchor" href="#">Home</a></li>
-                <li><a class="nav-anchor" href="#">About</a></li>
-                <li><a class="nav-anchor" href="#">Contact</a></li>
+                <li><a class="nav-anchor" id="a-home" href="#">Home</a></li>
+                <li><a class="nav-anchor" id="a-about" href="#">About</a></li>
+                <li><a class="nav-anchor" id="a-contact" href="#">Contact</a></li>
             </ul>
         </nav>
         <div class="burger" id="bur">
@@ -31,15 +31,19 @@
         </div>
     </header>
 
-    <section>
+    <section class="home" id="r-home">
         <div class="message">
             <h1>Hello Users Web page under construction!
             </h1>
             <p>Thanks for your patience</p>
         </div>
     </section>
+    <section class="about" id="r-about">
+        <h1>Will we update soon!!!!</h1>
+    </section>
 
-    <footer>
+
+    <footer id="contact">
         <h2> &copy; being develope by senthar</h2>
     </footer>
 </body>
@@ -47,8 +51,12 @@
 
     const burger = document.querySelector("#bur");
     const navlink = document.querySelector(".navlinks");
-    const links = document.querySelectorAll(".navlinks li")
+    const links = document.querySelectorAll(".navlinks li");
+    const anchorlink = document.querySelectorAll(".nav-anchor");
     const line = document.querySelectorAll(".burger div");
+    const header = document.querySelector(".home");
+    const section = document.querySelector(".about");
+    const footer = document.querySelector("footer");
     burger.addEventListener("click", () => {
         navlink.classList.toggle("navopen");
         console.log(line.classList);
@@ -56,6 +64,9 @@
         links.forEach(link => {
             link.classList.toggle("fade");
         });
+
+
+
         line.forEach((lines, index) => {
             if (index == 0) {
                 lines.classList.toggle("burgerfade");
@@ -68,6 +79,38 @@
             };
         });
     });
+
+    function scrools(positions) {
+        setTimeout(function () {
+            window.scroll({
+                left:0,
+                top:positions,
+                behavior:"smooth"
+            })
+        }, 2);
+        console.log(positions);
+    };
+    anchorlink.forEach(alink => {
+        alink.addEventListener("click", () => {
+            if (alink.id == "a-home") {
+                scrools(alink.getBoundingClientRect.top);
+                console.log(header.getBoundingClientRect());
+            }
+            else if (alink.id == "a-about") {
+                scrools(section.getBoundingClientRect().top);
+                console.log(section.getBoundingClientRect());
+            }
+            else if (alink.id == "a-contact") {
+                scrools(footer.getBoundingClientRect().top);
+            };
+
+        });
+
+    });
+
+
+
+
 
 
 </script>
