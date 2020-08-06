@@ -12,10 +12,9 @@
 
 <body>
     <header>
-
-        <h3 class="logo" on>
-            RJ Interior
-        </h3>
+        <div class="logo">
+            <img class="logo-rj" src="https://photos.google.com/photo/AF1QipO__k16dSlNPIGh72R9sUlY6NvqgdVu-O8w0P0z" alt="Rj Interior">
+        </div>
 
         <nav class="navlinks">
             <ul>
@@ -39,10 +38,12 @@
         </div>
     </section>
     <section class="about" id="r-about">
-        <p class="par">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, animi natus voluptas cum voluptatum
+        <p class="par">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, animi natus voluptas cum
+            voluptatum
             voluptatibus iste et numquam perspiciatis quisquam facilis adipisci quis corporis velit necessitatibus sed
             accusantium, nobis eum.</p>
-            <img src="https://super.homelane.com/products/07dec18/entertainment_unit/11.jpg" alt="justimage" class="justimg">
+        <img src="https://super.homelane.com/products/07dec18/entertainment_unit/11.jpg" alt="justimage"
+            class="justimg">
     </section>
 
 
@@ -62,6 +63,7 @@
     const footer = document.querySelector("footer");
     const aboutimg = document.querySelector(".justimg");
     const abtcon = document.querySelector(".par");
+    const logo = document.querySelector("header");
 
     burger.addEventListener("click", () => {
         navlink.classList.toggle("navopen");
@@ -129,10 +131,11 @@
 
     });
     window.addEventListener("scroll", () => {
-        console.log(window.scrollY);
-        if (window.scrollY > 50)
+        if (window.scrollY >= 50) {
             clearanimi();
-        if (window.scrollY >= 500){
+        }
+
+        if (window.scrollY >= 500) {
             aboutimg.classList.add("scrolleff");
             abtcon.classList.add("scrolleff");
 
