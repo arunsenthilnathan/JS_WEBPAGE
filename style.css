@@ -94,13 +94,13 @@ header {
     box-shadow: 1rem 1rem 4rem black;
     transform: scaleY(0) scaleX(0) ;
     opacity: .6;
-    transition: all 1s ease-in-out;
+    transition: all .5s ease-in-out;
     grid-area: g-mama;
 }
 .message{
     grid-area: g-message;
     transform: translate(-10rem);
-    transition:all 1.5s ease ;
+    transition:all 1s ease ;
     opacity: 0;
 }
 .message h1{
