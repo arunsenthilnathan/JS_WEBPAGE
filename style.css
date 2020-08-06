@@ -92,17 +92,13 @@ header {
     margin-top: 10rem;
     margin-left: 5rem;
     box-shadow: 1rem 1rem 4rem black;
-    transform: scaleY(0) scaleX(0) ;
-    opacity: .6;
     transition: all .5s ease-in-out;
     grid-area: g-mama;
 }
 .message{
     grid-area: g-message;
-    transform: translate(-10rem);
     transition:all 1s ease ;
-    opacity: 0;
-}
+    }
 .message h1{
     padding-top: 10rem;
     font-size: 4rem;
@@ -175,13 +171,13 @@ footer {
     }
     .home{
         display: grid;
+        grid-template-columns: unset;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: 'g-mama' 'g-message';
     }
     .message
     {
-        transform: translateY(-10rem);
-    }
+           }
     .message h1{
         font-size: 3rem;
         width: 25rem;
@@ -191,7 +187,8 @@ footer {
     }
     .mama{
         width: 27rem;
-        margin:3rem;
+        margin:auto;
+        margin-top: 2rem;
         z-index: -1;
     }
 
