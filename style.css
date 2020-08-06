@@ -178,6 +178,10 @@ footer {
         grid-template-rows: 1fr 1fr;
         grid-template-areas: 'g-mama' 'g-message';
     }
+    .message
+    {
+        transform: translateY(-10rem);
+    }
     .message h1{
         font-size: 3rem;
         width: 25rem;
