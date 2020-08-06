@@ -18,7 +18,7 @@ body {
 header {
     min-height: 5rem;
     background-color: #13547a;
-    border-bottom: black solid .2rem;
+    box-shadow: 0.1rem 0.5rem 1rem black;
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
     grid-template-areas: "g-logo none g-nav";
@@ -97,7 +97,7 @@ footer {
     text-align: center;
     padding: 20px 0px;
     background-color: #13547a;
-    border-top: black solid .2rem;
+    box-shadow: 0 -.5rem 1rem black;
     color: White;
 }
 

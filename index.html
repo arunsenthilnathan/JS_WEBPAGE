@@ -58,7 +58,7 @@
     const section = document.querySelector(".about");
     const footer = document.querySelector("footer");
 
-    
+
     burger.addEventListener("click", () => {
         navlink.classList.toggle("navopen");
         links.forEach(link => {
@@ -96,8 +96,6 @@
             });
         }
     };
-
-
     function scrools(positions) {
         clearanimi();
         setTimeout(function () {
@@ -112,7 +110,8 @@
         alink.addEventListener("click", () => {
 
             if (alink.id == "a-home") {
-                scrools(alink.getBoundingClientRect.top);
+                scrools(header.getBoundingClientRect().top);
+                console.log(header.getBoundingClientRect());
             }
             else if (alink.id == "a-about") {
                 scrools(section.getBoundingClientRect().top);
@@ -125,19 +124,11 @@
         });
 
     });
-    window.addEventListener("scroll",() =>{
-        if (document.documentElement.scrollTop>265)
-        clearanimi();
+    window.addEventListener("scroll", () => {
+        console.log(window.scrollY);
+        if (document.documentElement.scrollTop > 265)
+            clearanimi();
     });
-
-    
-
-
-
-
-
-
-
 </script>
 
 
