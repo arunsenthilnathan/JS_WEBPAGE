@@ -177,11 +177,20 @@ footer {
         grid-template-rows: 1fr 1fr;
         grid-template-areas: 'g-mama' 'g-message';
     }
+    .message h1{
+        font-size: 3rem;
+        width: 25rem;
+        margin: auto;
+        text-align: center;
+        padding-top: 0;
+    }
     .mama{
         width: 27rem;
         margin:3rem;
         z-index: -1;
     }
+
+
     .logo {
         margin-top: auto;
         margin-bottom: auto;
