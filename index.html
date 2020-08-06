@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@600&family=Shadows+Into+Light&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <title>RJ Interior</title>
 </head>
 
@@ -31,10 +30,14 @@
     </header>
 
     <section class="home" id="r-home">
+        <div class="mama-img">
+            <img src="https://lh3.googleusercontent.com/PHggtrr1p4W4WWkh3F_w4onc-F2RfEDUDmC9gRRoW34f2DsI1T_wLxM6EoxWYXmgZZt3rGPikRDUxgY-KsuVsY0BYjb7QpKcf6qRnLcbZHncGIYzvSdiY4p93nMpaWbE-A4OY5iFeuQYfBsTTZOW6fuij4Jvyxm2ulR3X43DXRFg5NhHpNewe2Wf68aJjlc31_t9zFGfLZkV-0XODzmmqnOd5iYGos0VDRLoZJsXPj3qfu9trKfw-cnJvJW0GDfOH3LaihTvm83cZBRO0YlWwFOfMKlWoXOhQYT17DmfYpZk2v-QxK4RTSt4o6CKKtDocOd5-Ky7L44IqoVrC0jAReZXyRovWEhXEUvs3Vy7Cm4LkgTqRUauNx0Z0usLA8uwZ3Sg0DIzV9Stz4b8sQp7vbb5b4XExymMpgiCxkerHhqYmg9wNlxMGESu6b3ZEyMJ4lvYD0JT7AbUD5bNP-dJTNlkKYSPR2e2ZeMRwsK8HY1pivEw5c8PK-qYN_lSyphGLNyMUL2_n6JPntbP2ma48m7SmVmrpUNMDoauPDQKC8VaNDrpdHQRO3ZVuWl82Tqk465X1NhXtF8irDAYPGRFABO7uXoVdpjMuSOju2iguSxgJQBRPnvpIhLjRNlJ6NjG8OWyg2aUN0lR0YQCf77S3GZgoX4fzkWtdzB52WT9AZQTyzwexVv7Q5gTraw=w585-h586-no?authuser=0" class="mama" alt="">
+        </div>
         <div class="message">
-            <h1>Hello Users Web page under construction!
-            </h1>
-            <p>Thanks for your patience</p>
+            <h1>Hello Users!! Wellcome to RJ INERIOR</h1>
+              <p> ' I'm Oshma Maran your dream shape desinger '
+            </p>
+
         </div>
     </section>
     <section class="about" id="r-about">
@@ -64,6 +67,8 @@
     const aboutimg = document.querySelector(".justimg");
     const abtcon = document.querySelector(".par");
     const logo = document.querySelector("header");
+    const mama =document.querySelector(".mama");
+    const mess = document.querySelector(".message");
 
     burger.addEventListener("click", () => {
         navlink.classList.toggle("navopen");
@@ -141,6 +146,11 @@
 
         }
 
+    });
+    window.addEventListener("load",() =>{
+        mama.style.transform="scaleY(1)";
+        mama.style.opacity="1";
+        mess.style.transform="scaleY(1)";
     });
 </script>
 

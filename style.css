@@ -76,16 +76,45 @@ header {
     min-height:70rem;
     height: auto;
     color: rgb(60, 2, 102);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 'g-mama g-message';
 }
 
-.message {
+.mama-img {
     font-size: 2.1rem;
-    padding-top: 20rem;
+}
+.mama
+{
+    display: block;
+    border-radius: 50%;
+    width: 50rem;
+    margin-top: 10rem;
+    margin-left: 5rem;
+    box-shadow: 1rem 1rem 4rem black;
+    transform: scaleY(0) scaleX(0);
+    opacity: .6;
+    transition: all 1s ease-in-out;
+    grid-area: g-mama;
+}
+.message{
+    grid-area: g-message;
+    transform: scaleX(0) scaleY(0);
+    transition:all 1.5s ease ;
+}
+.message h1{
+    padding-top: 10rem;
+    font-size: 4rem;
+    font-weight: lighter;
+    font-family: 'Lemonada', cursive;
+}
+.message p{
+    display: block;
+    font-size: 3rem;
+    padding-left: 2rem;
+font-family: 'Shadows Into Light', cursive;
 }
 
-.message h1, p {
-    text-align: center;
-}
 
 .about {
     width: 100%;
@@ -143,10 +172,20 @@ footer {
         background-color: #13547a;
         position: relative;
     }
+    .home{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 'g-mama' 'g-message';
+    }
+    .mama{
+        width: 27rem;
+        margin:3rem;
+        z-index: -1;
+    }
     .logo {
         margin-top: auto;
         margin-bottom: auto;
-        padding-left: 3rem;
+        padding-left: .5rem;
         color: whitesmoke;
         font-size: 2.8rem;
         font-family: 'Shadows Into Light', cursive;
@@ -163,7 +202,7 @@ footer {
         margin-left: auto;
         margin-right: auto;
         cursor: pointer;
-        z-index: 2;
+        z-index: 4;
     }
     .burger div {
         background-color: white;
@@ -183,6 +222,7 @@ footer {
     .navopen {
         clip-path: circle(1500px at 90% -20%);
         -webkit-clip-path: circle(1500px at 90% -20%);
+        z-index: 3;
     }
     .navlinks ul {
         display: flex;
