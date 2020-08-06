@@ -92,15 +92,16 @@ header {
     margin-top: 10rem;
     margin-left: 5rem;
     box-shadow: 1rem 1rem 4rem black;
-    transform: scaleY(0) scaleX(0);
+    transform: scaleY(0) scaleX(0) ;
     opacity: .6;
     transition: all 1s ease-in-out;
     grid-area: g-mama;
 }
 .message{
     grid-area: g-message;
-    transform: scaleX(0) scaleY(0);
+    transform: translate(-10rem);
     transition:all 1.5s ease ;
+    opacity: 0;
 }
 .message h1{
     padding-top: 10rem;
