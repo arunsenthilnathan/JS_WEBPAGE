@@ -110,6 +110,8 @@ footer {
   justify-content: space-around;
   transform: scaleY(0) translateX(100px);
   transition: all 1s ease; 
+  box-shadow:.2rem .5rem 2rem grey;
+  border-radius: 1rem;
 }
 
 .scrolleff{
