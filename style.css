@@ -130,8 +130,18 @@ font-family: 'Shadows Into Light', cursive;
     transform: translateX(-1000px);
     grid-area: g-para;
 }
+.contact{
+    position: relative;
+    width: 100%;
+    display: grid;
+    min-height: 40rem;
+    text-align: center;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 'g-para g-img';
+}
 
 footer {
+    position: relative;
     height: 2.5rem;
     align-items: center;
     justify-content: space-around;
@@ -153,7 +163,13 @@ footer {
   border-radius: 1rem;
   grid-area: g-img;
 }
+.address{
+    width: 20%;
+    font-size: 3rem;
+    padding-top: 5rem;
+    justify-content: left;
 
+}
 .scrolleff{
     transform: scaleY(1) translateX(0);
     transition:all 1s ease-in-out;
@@ -279,6 +295,16 @@ footer {
         grid-template-rows: 2fr 2fr;
         grid-template-areas: 'g-img'
         'g-para';
+    }
+    .contact{
+        width: 100%;
+        display: grid;
+        min-height: 30rem;
+        grid-template-columns: unset;
+    }
+    .address{
+        width: 35%;
+        font-size: 2rem;
     }
 
     .justimg{
