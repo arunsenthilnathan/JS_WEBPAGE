@@ -39,7 +39,10 @@
         </div>
     </section>
     <section class="about" id="r-about">
-        <h1>Will be update soon!!!!</h1>
+        <p class="par">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, animi natus voluptas cum voluptatum
+            voluptatibus iste et numquam perspiciatis quisquam facilis adipisci quis corporis velit necessitatibus sed
+            accusantium, nobis eum.</p>
+            <img src="/img/Jpeg_dirkse-2heads-133xver3.jpg" alt="justimage" class="justimg">
     </section>
 
 
@@ -57,7 +60,8 @@
     const header = document.querySelector(".home");
     const section = document.querySelector(".about");
     const footer = document.querySelector("footer");
-
+    const aboutimg = document.querySelector(".justimg");
+    const abtcon = document.querySelector(".par");
 
     burger.addEventListener("click", () => {
         navlink.classList.toggle("navopen");
@@ -126,8 +130,13 @@
     });
     window.addEventListener("scroll", () => {
         console.log(window.scrollY);
-        if (document.documentElement.scrollTop > 265)
+        if (window.scrollY > 50)
             clearanimi();
+        if (window.scrollY >= 500){
+            aboutimg.classList.toggle("scrolleff");
+            abtcon.classList.toggle("scrolleff");
+        }
+
     });
 </script>
 
