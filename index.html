@@ -149,7 +149,7 @@
             clearanimi();
         }
 
-        if (window.scrollY >= 500) {
+        if (section.getBoundingClientRect().top < window.innerHeight) {
             aboutimg.classList.add("scrolleff");
             abtcon.classList.add("scrolleff");
 
