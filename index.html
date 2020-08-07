@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKcNC3krsoTNBFVaM_98nyw9d3RKLmPP0&callback=initMap"
+      async  defer></script>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lemonada&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
     <title>RJ Interior</title>
 </head>
 
@@ -31,11 +35,12 @@
 
     <section class="home" id="r-home">
         <div class="mama-img">
-            <img src="https://i.ibb.co/7ChRg78/Screenshot-20200806-171325-01.jpg" class="mama" >
-</div>
+            <img src="https://i.ibb.co/7ChRg78/Screenshot-20200806-171325-01.jpg" class="mama">
+        </div>
         <div class="message">
             <h1>Hello Users!! Wellcome to RJ INERIOR</h1>
-              <p> ' I'm Oshma Maran your dream shape desinger I shoot bots to get mvp in pubg! People also call me BOT MAMA '
+            <p> ' I'm Oshma Maran your dream shape desinger I shoot bots to get mvp in pubg! People also call me BOT
+                MAMA '
             </p>
 
         </div>
@@ -49,11 +54,13 @@
             class="justimg">
     </section>
     <section class="contact" id="contact">
+        
+        <div id="map"></div>
         <div class="address">
-            RJ Interior 
-            Osham Maran
-            Oshma Palace
-            Mama Nagar
+            RJ Interior,
+            Osham Maran,
+            Oshma Palace,
+            Mama Nagar,
             Karaikal 609605
         </div>
     </section>
@@ -76,7 +83,7 @@
     const aboutimg = document.querySelector(".justimg");
     const abtcon = document.querySelector(".par");
     const logo = document.querySelector("header");
-    const mama =document.querySelector(".mama");
+    const mama = document.querySelector(".mama");
     const mess = document.querySelector(".message");
 
     burger.addEventListener("click", () => {
@@ -156,12 +163,30 @@
         }
 
     });
-   /* window.addEventListener("load",() =>{
-        mama.style.transform="scaleY(1)";
-        mama.style.opacity="1";
-        mess.style.transform="scaleY(1)";
-        mess.style.opacity="1";
-    });*/
+    /* window.addEventListener("load",() =>{
+         mama.style.transform="scaleY(1)";
+         mama.style.opacity="1";
+         mess.style.transform="scaleY(1)";
+         mess.style.opacity="1";
+     });*/
+
+
+
+
+    function initMap() {
+        var location = {
+            lat: 10.9397947, lng: 79.8431443
+    };
+      var map = new google.maps.Map(document.getElementById("map"), {
+            center: location,
+            zoom: 15
+        });
+        var marker = new google.maps.Marker({
+            position : location,
+            map: map
+        });
+    }
+
 </script>
 
 

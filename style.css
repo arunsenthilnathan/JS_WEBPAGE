@@ -25,7 +25,7 @@ header {
     grid-template-areas: "g-logo none g-nav";
 }
 
-.stickyeff{
+.stickyeff {
     height: 5rem;
     position: sticky;
     top: 0;
@@ -40,12 +40,12 @@ header {
     text-shadow: black 1px 1px;
     grid-area: g-logo;
 }
-.logo-rj{
+
+.logo-rj {
     width: 23rem;
     padding-left: 5rem;
     padding-top: 0rem;
 }
-
 
 .navlinks {
     margin-top: auto;
@@ -73,7 +73,7 @@ header {
 
 .home {
     width: 100%;
-    min-height:70rem;
+    min-height: 70rem;
     height: auto;
     color: rgb(60, 2, 102);
     display: grid;
@@ -84,8 +84,8 @@ header {
 .mama-img {
     font-size: 2.1rem;
 }
-.mama
-{
+
+.mama {
     display: block;
     border-radius: 50%;
     width: 50rem;
@@ -95,23 +95,25 @@ header {
     transition: all .5s ease-in-out;
     grid-area: g-mama;
 }
-.message{
+
+.message {
     grid-area: g-message;
-    transition:all 1s ease ;
-    }
-.message h1{
+    transition: all 1s ease;
+}
+
+.message h1 {
     padding-top: 10rem;
     font-size: 4rem;
     font-weight: lighter;
     font-family: 'Lemonada', cursive;
 }
-.message p{
+
+.message p {
     display: block;
     font-size: 3rem;
     padding-left: 2rem;
-font-family: 'Shadows Into Light', cursive;
+    font-family: 'Shadows Into Light', cursive;
 }
-
 
 .about {
     width: 100%;
@@ -123,21 +125,24 @@ font-family: 'Shadows Into Light', cursive;
     grid-template-areas: 'g-para g-img';
 }
 
-
-.par{
+.par {
     font-size: 2.1rem;
     margin: auto;
     transform: translateX(-1000px);
     grid-area: g-para;
 }
-.contact{
+
+.contact {
     position: relative;
     width: 100%;
     display: grid;
     min-height: 40rem;
     text-align: center;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: 'g-para g-img';
+    grid-template-columns: 1fr 1fr;
+}
+
+#map {
+    height: 100%;
 }
 
 footer {
@@ -151,30 +156,30 @@ footer {
     box-shadow: 0 -.5rem 1rem black;
     color: White;
 }
-.justimg{
+
+.justimg {
     display: block;
-  margin: auto;
-  width: 60%;
-  align-items: center;
-  justify-content: space-around;
-  transform: scaleY(0) translateX(100px);
-  transition: all 1s ease; 
-  box-shadow:.2rem .5rem 2rem grey;
-  border-radius: 1rem;
-  grid-area: g-img;
+    margin: auto;
+    width: 60%;
+    align-items: center;
+    justify-content: space-around;
+    transform: scaleY(0) translateX(100px);
+    transition: all 1s ease;
+    box-shadow: .2rem .5rem 2rem grey;
+    border-radius: 1rem;
+    grid-area: g-img;
 }
-.address{
-    width: 20%;
+
+.address {
     font-size: 3rem;
     padding-top: 5rem;
     justify-content: left;
-
 }
-.scrolleff{
+
+.scrolleff {
     transform: scaleY(1) translateX(0);
-    transition:all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
-
 
 @media screen and (max-width:600px) {
     header {
@@ -185,30 +190,26 @@ footer {
         background-color: #13547a;
         position: relative;
     }
-    .home{
+    .home {
         display: grid;
         grid-template-columns: unset;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: 'g-mama' 'g-message';
     }
-    .message
-    {
-           }
-    .message h1{
+    .message {}
+    .message h1 {
         font-size: 3rem;
         width: 25rem;
         margin: auto;
         text-align: center;
         padding-top: 0;
     }
-    .mama{
+    .mama {
         width: 27rem;
-        margin:auto;
+        margin: auto;
         margin-top: 2rem;
         z-index: -1;
     }
-
-
     .logo {
         margin-top: auto;
         margin-bottom: auto;
@@ -284,7 +285,6 @@ footer {
         transform: rotate(45deg) translate(-5px, -6px);
         transition: .1s ease;
     }
-
     .about {
         width: 100%;
         display: grid;
@@ -293,21 +293,20 @@ footer {
         text-align: center;
         grid-template-columns: unset;
         grid-template-rows: 2fr 2fr;
-        grid-template-areas: 'g-img'
-        'g-para';
+        grid-template-areas: 'g-img' 'g-para';
     }
-    .contact{
+    .contact {
         width: 100%;
         display: grid;
         min-height: 30rem;
         grid-template-columns: unset;
+        grid-template-rows: 2fr 1fr;
     }
-    .address{
-        width: 35%;
-        font-size: 2rem;
+    .address {
+        transform: translateY(-1.5rem);
+        font-size: 2rem
     }
-
-    .justimg{
+    .justimg {
         margin: auto;
     }
 }
