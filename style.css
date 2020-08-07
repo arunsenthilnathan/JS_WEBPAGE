@@ -298,7 +298,7 @@ footer {
     .contact {
         width: 100%;
         display: grid;
-        min-height: 30rem;
+        min-height: 50rem;
         grid-template-columns: unset;
         grid-template-rows: 2fr 1fr;
     }
