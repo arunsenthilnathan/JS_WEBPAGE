@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKcNC3krsoTNBFVaM_98nyw9d3RKLmPP0&callback=initMap"
-      async  defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKcNC3krsoTNBFVaM_98nyw9d3RKLmPP0&callback=initMap"
+        async defer></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lemonada&family=Shadows+Into+Light&display=swap"
         rel="stylesheet">
@@ -14,7 +13,8 @@
 </head>
 
 <body>
-    <header>
+    <header class="heas">
+        <h2 id="rj"></h2>
         <div class="logo">
             <img class="logo-rj" src="https://i.ibb.co/NxPDC8Q/Webp-net-resizeimage-3.png" alt="Rj Interior">
         </div>
@@ -54,7 +54,7 @@
             class="justimg">
     </section>
     <section class="contact" id="contact">
-        
+
         <div id="map"></div>
         <div class="address">
             RJ Interior,
@@ -82,7 +82,7 @@
     const footer = document.querySelector(".contact");
     const aboutimg = document.querySelector(".justimg");
     const abtcon = document.querySelector(".par");
-    const logo = document.querySelector("header");
+    const logo = document.querySelector(".heas");
     const mama = document.querySelector(".mama");
     const mess = document.querySelector(".message");
 
@@ -152,10 +152,22 @@
 
     });
     window.addEventListener("scroll", () => {
+        var los = document.querySelector(".logo");
+        var loss = document.querySelector("logo-rj");  
         if (window.scrollY >= 50) {
             clearanimi();
-        }
 
+
+        }
+        if (window.scrollY >= 200) {
+            logo.classList.add("stickyeff");
+            los.style.display = "none";
+            document.getElementById("rj").innerHTML="RJ INTERIOR";
+        }
+        else {
+            logo.classList.remove("stickyeff");
+            los.style.display = "block"
+        }
         if (section.getBoundingClientRect().top < window.innerHeight) {
             aboutimg.classList.add("scrolleff");
             abtcon.classList.add("scrolleff");
@@ -176,13 +188,13 @@
     function initMap() {
         var location = {
             lat: 10.9397947, lng: 79.8431443
-    };
-      var map = new google.maps.Map(document.getElementById("map"), {
+        };
+        var map = new google.maps.Map(document.getElementById("map"), {
             center: location,
             zoom: 15
         });
         var marker = new google.maps.Marker({
-            position : location,
+            position: location,
             map: map
         });
     }

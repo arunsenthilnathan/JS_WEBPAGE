@@ -12,23 +12,26 @@ html {
 }
 
 body {
-    height: 100%;
+    height:auto;
 }
 
-header {
+.heas {
     min-height: 5rem;
     height: 15rem;
     background-color: #13547a;
     box-shadow: 0.1rem 0.5rem 1rem black;
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
-    grid-template-areas: "g-logo none g-nav";
+    grid-template-areas: "g-logo . g-nav";
+    position: sticky;
+    top:0;
+    z-index:3;
 }
+
+
 
 .stickyeff {
     height: 5rem;
-    position: sticky;
-    top: 0;
 }
 
 .logo {
