@@ -233,7 +233,7 @@ footer {
         display: grid;
         grid-template-columns: 4fr 1fr;
         grid-template-areas: 'g-logo g-burger';
-        height: 20rem;
+        height: 25rem;
         background-color: #13547a;
         position: fixed;
         z-index: 3;
@@ -307,7 +307,7 @@ footer {
     }
     .navlinks {
         position: absolute;
-        height: 100vh;
+        height: 90vh;
         width: 100%;
         background-color: #13547a;
         clip-path: circle(100px at 90% -20%);
