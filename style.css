@@ -353,6 +353,7 @@ footer {
         transition: .1s ease;
     }
     .about {
+        position: relative;
         width: 100%;
         display: grid;
         min-height: 70rem;
@@ -368,6 +369,10 @@ footer {
         min-height: 50rem;
         grid-template-columns: unset;
         grid-template-rows: 2fr 1fr;
+        position: relative;
+    }
+    .foots{
+        position: relative;
     }
     .address {
         transform: translateY(-1.5rem);
