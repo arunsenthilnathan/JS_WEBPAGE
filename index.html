@@ -14,7 +14,7 @@
 
 <body>
     <header class="heas">
-        <h2 id="rj"></h2>
+        <h2 class="rj">RJ INTERIORS</h2>
         <div class="logo">
             <img class="logo-rj" src="https://i.ibb.co/NxPDC8Q/Webp-net-resizeimage-3.png" alt="Rj Interior">
         </div>
@@ -77,14 +77,14 @@
     const links = document.querySelectorAll(".navlinks li");
     const anchorlink = document.querySelectorAll(".nav-anchor");
     const line = document.querySelectorAll(".burger div");
-    const header = document.querySelector(".home");
-    const section = document.querySelector(".about");
-    const footer = document.querySelector(".contact");
     const aboutimg = document.querySelector(".justimg");
     const abtcon = document.querySelector(".par");
     const logo = document.querySelector(".heas");
     const mama = document.querySelector(".mama");
     const mess = document.querySelector(".message");
+    var header = document.querySelector(".home");
+    var section = document.querySelector(".about");
+    var footer = document.querySelector(".contact");
 
     burger.addEventListener("click", () => {
         navlink.classList.toggle("navopen");
@@ -138,40 +138,44 @@
 
             if (alink.id == "a-home") {
                 scrools(header.getBoundingClientRect().top);
-                console.log(header.getBoundingClientRect());
+                console.log(window.scrollY-header.getBoundingClientRect().top);
             }
             else if (alink.id == "a-about") {
                 scrools(section.getBoundingClientRect().top);
+                console.log(window.scrollY-section.getBoundingClientRect().top);
 
             }
             else if (alink.id == "a-contact") {
                 scrools(footer.getBoundingClientRect().top);
+                console.log(window.top.length);
+
             };
 
         });
 
     });
     window.addEventListener("scroll", () => {
-        var los = document.querySelector(".logo");
-        var loss = document.querySelector("logo-rj");  
+        var loss = document.querySelector(".logo-rj");
+        var rj = document.querySelector(".rj");
         if (window.scrollY >= 50) {
             clearanimi();
 
 
         }
-        if (window.scrollY >= 200) {
+        if (window.scrollY > 50) {
             logo.classList.add("stickyeff");
-            los.style.display = "none";
-            document.getElementById("rj").innerHTML="RJ INTERIOR";
+            loss.classList.add("logoeff");
+            rj.classList.add("rjeff");
         }
         else {
             logo.classList.remove("stickyeff");
-            los.style.display = "block"
+            rj.classList.remove("rjeff")
+            loss.classList.remove("logoeff");
+
         }
         if (section.getBoundingClientRect().top < window.innerHeight) {
             aboutimg.classList.add("scrolleff");
             abtcon.classList.add("scrolleff");
-
         }
 
     });
@@ -181,10 +185,6 @@
          mess.style.transform="scaleY(1)";
          mess.style.opacity="1";
      });*/
-
-
-
-
     function initMap() {
         var location = {
             lat: 10.9397947, lng: 79.8431443

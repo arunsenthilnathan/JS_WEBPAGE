@@ -23,9 +23,10 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
     grid-template-areas: "g-logo . g-nav";
-    position: sticky;
-    top:0;
+    position: fixed;
+    width: 100%;
     z-index:3;
+    transition: all .7s ease;
 }
 
 
@@ -35,19 +36,23 @@ body {
 }
 
 .logo {
-    color: whitesmoke;
-    font-size: 2.0rem;
-    font-family: 'Shadows Into Light', cursive;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-    text-shadow: black 1px 1px;
     grid-area: g-logo;
+    transition: all 1s ease;
+    opacity: 1;
 }
+
 
 .logo-rj {
     width: 23rem;
     padding-left: 5rem;
     padding-top: 0rem;
+    transition: all 1s ease;
+    opacity: 1;
+}
+.logoeff{
+    height: 5rem;
+    opacity: 0;
+    transform: translateY(-10rem);
 }
 
 .navlinks {
@@ -82,10 +87,17 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas: 'g-mama g-message';
+    position: relative;
+    top: 15rem;
 }
 
 .mama-img {
     font-size: 2.1rem;
+    
+}
+@keyframes mamas{
+    from {transform: scale(0,0);}
+    to {transform: scaleX(1);}
 }
 
 .mama {
@@ -95,6 +107,8 @@ body {
     margin-top: 10rem;
     margin-left: 5rem;
     box-shadow: 1rem 1rem 4rem black;
+    animation-name: mamas;
+    animation-duration: 2s;
     transition: all .5s ease-in-out;
     grid-area: g-mama;
 }
@@ -102,6 +116,8 @@ body {
 .message {
     grid-area: g-message;
     transition: all 1s ease;
+    animation-name: mamas;
+    animation-duration: 2s;
 }
 
 .message h1 {
@@ -109,6 +125,25 @@ body {
     font-size: 4rem;
     font-weight: lighter;
     font-family: 'Lemonada', cursive;
+    
+}
+.rj{
+    font-size: 3rem;
+    color: white;
+    letter-spacing: .8rem;
+    padding: 1rem;
+    opacity: 0;
+    transform: translateY(-1rem);
+}
+.rjeff{
+    font-size: 3rem;
+    color: white;
+    letter-spacing: .8rem;
+    padding: 1rem;
+    transform:translateY(0);
+    transition: all .7s ease-in;
+    opacity: 1;
+    grid-area: g-logo;
 }
 
 .message p {
@@ -126,6 +161,8 @@ body {
     text-align: center;
     grid-template-columns: 2fr 1fr;
     grid-template-areas: 'g-para g-img';
+    position: relative;
+    top: 15rem;
 }
 
 .par {
@@ -142,10 +179,13 @@ body {
     min-height: 40rem;
     text-align: center;
     grid-template-columns: 1fr 1fr;
+    top: 15rem;
 }
 
 #map {
     height: 100%;
+  margin: auto;
+    border-radius: 50%;
 }
 
 footer {
@@ -158,6 +198,7 @@ footer {
     background-color: #13547a;
     box-shadow: 0 -.5rem 1rem black;
     color: White;
+    top: 15rem;
 }
 
 .justimg {
@@ -199,7 +240,9 @@ footer {
         grid-template-rows: 1fr 1fr;
         grid-template-areas: 'g-mama' 'g-message';
     }
-    .message {}
+    .message {
+        
+    }
     .message h1 {
         font-size: 3rem;
         width: 25rem;
