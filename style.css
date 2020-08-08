@@ -356,6 +356,7 @@ footer {
         position: relative;
         width: 100%;
         display: grid;
+        top: 25rem;
         min-height: 70rem;
         background-color: cornsilk;
         text-align: center;
@@ -369,9 +370,11 @@ footer {
         min-height: 50rem;
         grid-template-columns: unset;
         grid-template-rows: 2fr 1fr;
+        top: 25rem;
         position: relative;
     }
-    .foots{
+    footer{
+        top: 25rem;
         position: relative;
     }
     .address {
