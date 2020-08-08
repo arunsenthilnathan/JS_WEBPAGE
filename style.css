@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    height:auto;
+    height: auto;
 }
 
 .heas {
@@ -25,11 +25,9 @@ body {
     grid-template-areas: "g-logo . g-nav";
     position: fixed;
     width: 100%;
-    z-index:3;
+    z-index: 3;
     transition: all .7s ease;
 }
-
-
 
 .stickyeff {
     height: 5rem;
@@ -41,7 +39,6 @@ body {
     opacity: 1;
 }
 
-
 .logo-rj {
     width: 23rem;
     padding-left: 5rem;
@@ -49,7 +46,8 @@ body {
     transition: all 1s ease;
     opacity: 1;
 }
-.logoeff{
+
+.logoeff {
     height: 5rem;
     opacity: 0;
     transform: translateY(-10rem);
@@ -93,11 +91,15 @@ body {
 
 .mama-img {
     font-size: 2.1rem;
-    
 }
-@keyframes mamas{
-    from {transform: scale(0,0);}
-    to {transform: scaleX(1);}
+
+@keyframes mamas {
+    from {
+        transform: scale(0, 0);
+    }
+    to {
+        transform: scaleX(1);
+    }
 }
 
 .mama {
@@ -125,9 +127,9 @@ body {
     font-size: 4rem;
     font-weight: lighter;
     font-family: 'Lemonada', cursive;
-    
 }
-.rj{
+
+.rj {
     font-size: 3rem;
     color: white;
     letter-spacing: .8rem;
@@ -135,12 +137,13 @@ body {
     opacity: 0;
     transform: translateY(-1rem);
 }
-.rjeff{
+
+.rjeff {
     font-size: 3rem;
     color: white;
     letter-spacing: .8rem;
     padding: 1rem;
-    transform:translateY(0);
+    transform: translateY(0);
     transition: all .7s ease-in;
     opacity: 1;
     grid-area: g-logo;
@@ -184,7 +187,7 @@ body {
 
 #map {
     height: 100%;
-  margin: auto;
+    margin: auto;
     border-radius: 50%;
 }
 
@@ -226,23 +229,41 @@ footer {
 }
 
 @media screen and (max-width:600px) {
-    header {
+    .heas {
         display: grid;
         grid-template-columns: 4fr 1fr;
-        grid-template-areas: "g-logo g-burger ";
-        min-height: 25rem;
+        grid-template-areas: 'g-logo g-burger';
+        height: 25rem;
         background-color: #13547a;
-        position: relative;
+        position: fixed;
+        z-index: 3;
+        transition: all .7s ease;
     }
+    .stickyeff {
+        height: 5rem;
+    }
+    
+.rjeff {
+    font-size: 2rem;
+    color: white;
+    letter-spacing: .8rem;
+    padding: 1rem;
+    transform: translateY(0);
+    transition: all .7s ease-in;
+    opacity: 1;
+    grid-area: g-logo;
+}
+
+    
     .home {
+        position: relative;
+        top: 25rem;
         display: grid;
         grid-template-columns: unset;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: 'g-mama' 'g-message';
     }
-    .message {
-        
-    }
+    .message {}
     .message h1 {
         font-size: 3rem;
         width: 25rem;
