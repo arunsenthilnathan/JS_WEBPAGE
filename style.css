@@ -227,6 +227,16 @@ footer {
     transform: scaleY(1) translateX(0);
     transition: all 1s ease-in-out;
 }
+.posline{
+    position: fixed;
+    top: 15rem;
+    background-color: red;
+    height: .21rem;
+    z-index: 4;
+}
+.poseff{
+    top: 5rem;
+}
 
 @media screen and (max-width:600px) {
     .heas {
@@ -239,6 +249,18 @@ footer {
         z-index: 3;
         transition: all .7s ease;
     }
+    
+    .posline{
+        position: fixed;
+        top: 25rem;
+        background-color: red;
+        height: .21rem;
+        z-index: 3;
+    }
+    .poseff{
+        top: 6rem;
+    }
+
     .stickyeff {
         height: 6rem;
     }
