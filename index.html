@@ -221,6 +221,11 @@ var c = Math.abs(window.scrollY);
 console.log(((c/document.documentElement.scrollHeight)*c)/10)
     };
 
+window.addEventListener("load", () => {
+    window.localStorage.setItem("name","hello world")
+    console.log(window.localStorage.getItem("name"))
+})
+
 </script>
 
 
