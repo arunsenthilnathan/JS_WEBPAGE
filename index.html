@@ -159,17 +159,17 @@
         var rj = document.querySelector(".rj");
         var posline= document.querySelector(".posline")
         var c = Math.abs(window.scrollY);
-        var nextco =(((c/document.documentElement.scrollHeight)*c)/8)+"%";
+        var nextco =(((c/document.documentElement.scrollHeight)*c)/8.5)+"%";
         let pervco = 0;
         var scrl =document.documentElement.scrollTop;
         console.log(window.scroll);
         if(window.scrollY>0){
             posline.style.width=nextco;
-            pervco=(((c/document.documentElement.scrollHeight)*c)/8)+"%";
+            pervco=(((c/document.documentElement.scrollHeight)*c)/8.5)+"%";
         }
         else{
             posline.style.width=pervco;
-            nextco =(((c/document.documentElement.scrollHeight)*c)/8)+"%";
+            nextco =(((c/document.documentElement.scrollHeight)*c)/8.5)+"%";
         }
        
         if (window.scrollY >= 50) {

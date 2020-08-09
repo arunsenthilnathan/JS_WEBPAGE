@@ -227,14 +227,16 @@ footer {
     transform: scaleY(1) translateX(0);
     transition: all 1s ease-in-out;
 }
-.posline{
+
+.posline {
     position: fixed;
     top: 15rem;
-    background-color: red;
+    background: linear-gradient(to right, #f83239, #f5160e);
     height: .21rem;
     z-index: 4;
 }
-.poseff{
+
+.poseff {
     top: 5rem;
 }
 
@@ -249,34 +251,29 @@ footer {
         z-index: 3;
         transition: all .7s ease;
     }
-    
-    .posline{
+    .posline {
         position: fixed;
         top: 25rem;
-        background-color: red;
+        background: linear-gradient(to right, #f83239, #f5160e);
         height: .21rem;
         z-index: 3;
     }
-    .poseff{
+    .poseff {
         top: 6rem;
     }
-
     .stickyeff {
         height: 6rem;
     }
-    
-.rjeff {
-    font-size: 2rem;
-    color: white;
-    letter-spacing: .8rem;
-    padding: 2rem;
-    transform: translateY(0);
-    transition: all .7s ease-in;
-    opacity: 1;
-    grid-area: g-logo;
-}
-
-    
+    .rjeff {
+        font-size: 2rem;
+        color: white;
+        letter-spacing: .8rem;
+        padding: 2rem;
+        transform: translateY(0);
+        transition: all .7s ease-in;
+        opacity: 1;
+        grid-area: g-logo;
+    }
     .home {
         position: relative;
         top: 25rem;
@@ -395,7 +392,7 @@ footer {
         top: 25rem;
         position: relative;
     }
-    footer{
+    footer {
         top: 25rem;
         position: relative;
     }
