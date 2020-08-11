@@ -160,7 +160,6 @@ body {
     width: 100%;
     display: grid;
     min-height: 70rem;
-    background-color: cornsilk;
     text-align: center;
     grid-template-columns: 2fr 1fr;
     grid-template-areas: 'g-para g-img';
