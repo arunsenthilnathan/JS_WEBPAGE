@@ -48,7 +48,7 @@ body {
 }
 
 .logoeff {
-    height: 5rem;
+    height: 0rem;
     opacity: 0;
     transform: translateY(-10rem);
 }
