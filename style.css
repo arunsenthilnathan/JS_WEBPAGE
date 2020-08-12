@@ -438,10 +438,10 @@ footer {
         width: 100%;
         display: grid;
         top: 25rem;
-        min-height: 70rem;
+        min-height: 10rem;
         text-align: center;
         grid-template-columns: unset;
-        grid-template-rows: 2fr 1fr;
+        grid-template-rows: unset;
         overflow-x: auto;
     }
     .cardholder {
