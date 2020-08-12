@@ -8,7 +8,6 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     height: auto;
-    overflow: auto;
 }
 
 body {
@@ -157,14 +156,14 @@ body {
 }
 
 .about {
-    width: 100%;
-    display: grid;
-    min-height: 70rem;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 80rem;
     text-align: center;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: 'g-para g-img';
     position: relative;
     top: 15rem;
+    overflow-x: hidden;
 }
 
 .par {
@@ -223,6 +222,72 @@ footer {
 .scrolleff {
     transform: scaleY(1) translateX(0);
     transition: all 1s ease-in-out;
+}
+
+.cardholder {
+    display: flex;
+    width: auto;
+    height: 70rem;
+    margin: auto;
+    transition: all .5s ease-in-out;
+    overflow-x: hidden;
+}
+
+.next, .pervious {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    opacity: .6;
+    border: none;
+    z-index: 4;
+}
+
+.next {
+    right: 1rem;
+    top: 40rem
+}
+
+.pervious {
+    left: 0rem;
+    top: 40rem
+}
+
+.btn img {
+    width: 5rem;
+    height: 5rem;
+    border: none;
+}
+
+.card {
+    width: 30rem;
+    height: 50rem;
+    display: grid;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+    grid-template-rows: 2fr 1fr;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1.5rem gray;
+}
+
+.cardimg {
+    width: 25rem;
+    height: 20rem;
+    margin: auto;
+    box-shadow: #13547a 0 0rem 1.5rem;
+    border-radius: .5rem;
+}
+
+.cardimg img {
+    width: 25rem;
+    height: 20rem;
+    border-radius: .5rem;
+}
+
+.cardcontent {
+    font-size: 1rem;
+    text-align: center;
 }
 
 .posline {

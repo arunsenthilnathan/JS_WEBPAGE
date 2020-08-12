@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfR0ZrZuYoS-TdXslwEGU7xJHSKqrBe6Y&callback=initMap&libraries=&v=weekly"
-      defer
-    ></script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfR0ZrZuYoS-TdXslwEGU7xJHSKqrBe6Y&callback=initMap&libraries=&v=weekly"
+        defer></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lemonada&family=Shadows+Into+Light&display=swap"
         rel="stylesheet">
@@ -49,12 +48,53 @@
         </div>
     </section>
     <section class="about" id="r-about">
-        <p class="par">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, animi natus voluptas cum
-            voluptatum
-            voluptatibus iste et numquam perspiciatis quisquam facilis adipisci quis corporis velit necessitatibus sed
-            accusantium, nobis eum.</p>
-        <img src="https://super.homelane.com/products/07dec18/entertainment_unit/11.jpg" alt="justimage"
-            class="justimg">
+        <div class="cardholder">
+            <div class="card">
+                <div class="cardimg">
+                    <img src="/img/Jpeg_dirkse-2heads-133xver3.jpg" alt="">
+                </div>
+                <div class="cardcontent">
+                    <h2>Project 1</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardimg"> <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt=""></div>
+                <div class="cardcontent">
+                    <h2>Project 2</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardimg"> <img
+                        src="https://images.all-free-download.com/images/graphiclarge/fashion_living_room_interior_quality_picture_167573.jpg"
+                        alt=""></div>
+                <div class="cardcontent">
+                    <h2>Project 3</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardimg"> <img
+                        src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        alt=""></div>
+                <div class="cardcontent">
+                    <h2>Project 4</h2>
+                    <p>Prject</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardimg"> <img src="https://images.pexels.com/photos/1129413/pexels-photo-1129413.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
+                <div class="cardcontent">
+                    <h2>Project 5</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </div>
+        <div class = "btn">
+        <button class="next"><img src="https://img.icons8.com/flat_round/64/000000/arrow-right.png" /></button>
+        <button class="pervious"><img src="https://img.icons8.com/flat_round/64/000000/arrow-left.png" /></button>
+    </div>
     </section>
     <section class="contact" id="contact">
 
@@ -87,7 +127,7 @@
     var header = document.querySelector(".home");
     var section = document.querySelector(".about");
     var footer = document.querySelector(".contact");
-    var posline= document.querySelector(".posline")
+    var posline = document.querySelector(".posline")
 
     burger.addEventListener("click", () => {
         navlink.classList.toggle("navopen");
@@ -128,11 +168,11 @@
     };
     function scrools(positions) {
         clearanimi();
-            window.scroll({
-                left: 0,
-                top: positions,
-                behavior: "smooth"
-            })
+        window.scroll({
+            left: 0,
+            top: positions,
+            behavior: "smooth"
+        })
     };
     anchorlink.forEach(alink => {
         alink.addEventListener("click", () => {
@@ -159,21 +199,21 @@
     window.addEventListener("scroll", () => {
         var loss = document.querySelector(".logo-rj");
         var rj = document.querySelector(".rj");
-        var posline= document.querySelector(".posline")
+        var posline = document.querySelector(".posline")
         var c = Math.abs(window.scrollY);
-        var nextco =(((c/document.documentElement.scrollHeight)*c)/5)+"%";
+        var nextco = (((c / document.documentElement.scrollHeight) * c) / 5) + "%";
         let pervco = 0;
-        var scrl =document.documentElement.scrollTop;
+        var scrl = document.documentElement.scrollTop;
         console.log(window.scroll);
-        if(window.scrollY>0){
-            posline.style.width=nextco;
-            pervco=(((c/document.documentElement.scrollHeight)*c)/5)+"%";
+        if (window.scrollY > 0) {
+            posline.style.width = nextco;
+            pervco = (((c / document.documentElement.scrollHeight) * c) / 5) + "%";
         }
-        else{
-            posline.style.width=pervco;
-            nextco =(((c/document.documentElement.scrollHeight)*c)/5)+"%";
+        else {
+            posline.style.width = pervco;
+            nextco = (((c / document.documentElement.scrollHeight) * c) / 5) + "%";
         }
-       
+
         if (window.scrollY >= 50) {
             clearanimi();
 
@@ -192,10 +232,10 @@
             posline.classList.remove("poseff");
 
         }
-        if (section.getBoundingClientRect().top < window.innerHeight) {
-            aboutimg.classList.add("scrolleff");
-            abtcon.classList.add("scrolleff");
-        }
+        /*  if (section.getBoundingClientRect().top < window.innerHeight) {
+              aboutimg.classList.add("scrolleff");
+              abtcon.classList.add("scrolleff");
+          }*/
 
     });
     /* window.addEventListener("load",() =>{
@@ -219,14 +259,62 @@
     }
 
     function goto() {
-var c = Math.abs(window.scrollY);
-console.log(((c/document.documentElement.scrollHeight)*c)/10)
+        var c = Math.abs(window.scrollY);
+        console.log(((c / document.documentElement.scrollHeight) * c) / 10)
     };
 
-window.addEventListener("load", () => {
-    window.localStorage.setItem("name","hello world")
-    console.log(window.localStorage.getItem("name"))
-})
+    window.addEventListener("load", () => {
+        window.localStorage.setItem("name", "hello world")
+        console.log(window.localStorage.getItem("name"))
+    })
+
+
+    const pervious = document.querySelector(".pervious");
+    const next = document.querySelector(".next");
+    const cardholder = document.querySelector(".cardholder");
+    const cards = document.querySelectorAll(".cardholder .card");
+    let maxcount = cards.length;
+    let slidecount = 0;
+    let cardwidth = cards[0].clientWidth +32 ;
+    let cons = Math.floor( section.clientWidth /cardwidth);
+    console.log(cons,cardwidth,section.clientWidth)
+    console.log(maxcount, slidecount, cardwidth)
+
+    next.addEventListener("click", () => {
+        slidecount++
+        if (slidecount < maxcount) {
+            console.log(maxcount, slidecount, cardwidth);
+            cardholder.style.transform = "translateX(" + (-slidecount * cardwidth) + "px)"
+            let newnodess = cards[0].cloneNode(true);
+            let newnod = cards[1].cloneNode(true);
+            let newno = cards[2].cloneNode(true);
+            console.log(newnodess)
+            cardholder.appendChild(newnodess)
+            cardholder.appendChild(newnod)
+            cardholder.appendChild(newno)
+        }
+        else {
+            slidecount = slidecount - maxcount
+            cardholder.style.transform = "translateX(0)"
+        }
+
+    }
+    )
+    pervious.addEventListener("click", () => {
+        slidecount--
+        if (slidecount == -1) {
+            slidecount= maxcount-1
+            let moveconst = maxcount-1
+            console.log(maxcount, slidecount, cardwidth);
+            cardholder.style.transform = "translateX(" + (-moveconst * cardwidth) + "px)"
+        }
+        else {
+            cardholder.style.transform = "translateX(" + (-slidecount * cardwidth) + "px)"
+        }
+
+    }
+    )
+
 
 </script>
 
