@@ -447,6 +447,10 @@ footer {
     .cardholder {
         overflow-x: auto;
     }
+    .card {
+        width: 35rem;
+        height: 60rem;
+    }
     .btn{
         display: none;
     }
