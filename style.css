@@ -441,8 +441,14 @@ footer {
         min-height: 70rem;
         text-align: center;
         grid-template-columns: unset;
-        grid-template-rows: 2fr 2fr;
-        grid-template-areas: 'g-img' 'g-para';
+        grid-template-rows: 2fr 1fr;
+        overflow-x: auto;
+    }
+    .cardholder {
+        overflow-x: auto;
+    }
+    .btn{
+        display: none;
     }
     .contact {
         width: 100%;
