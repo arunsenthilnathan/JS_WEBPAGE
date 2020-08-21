@@ -335,7 +335,7 @@ footer {
 @media screen and (max-width:600px) {
     .heas {
         display: grid;
-        grid-template-columns: 4fr 1fr;
+        grid-template-columns: 4fr 1fr 0;
         grid-template-areas: 'g-logo g-burger';
         height: 25rem;
         background-color: #13547a;
@@ -356,6 +356,8 @@ footer {
     .stickyeff {
         height: 6rem;
     }
+
+
     .rjeff {
         font-size: 2rem;
         color: white;
