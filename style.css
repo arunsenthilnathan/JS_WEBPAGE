@@ -26,6 +26,7 @@ body {
     width: 100%;
     z-index: 3;
     transition: all .7s ease;
+    font-family: 'Crete Round', serif;
 }
 
 .stickyeff {
@@ -39,9 +40,8 @@ body {
 }
 
 .logo-rj {
-    width: 23rem;
-    padding-left: 5rem;
-    padding-top: 0rem;
+    width: 20rem;
+    padding-left: 3rem;
     transition: all 1s ease;
     opacity: 1;
 }
@@ -67,7 +67,14 @@ body {
 .navlinks ul li {
     text-align: center;
     text-transform: uppercase;
+    font-family: 'Crete Round', serif;
 }
+.navlinks ul li a {
+    font-size: 2rem;
+    font-weight: 1000;
+    color:#ff791a ;
+}
+
 
 .nav-anchor {
     text-decoration: none;
@@ -312,6 +319,19 @@ footer {
     top: 5rem;
 }
 
+.services{
+    width: auto;
+    min-height: 60rem;
+    background-color: #f83239;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.feature{
+    background-color: antiquewhite;
+    border-radius: 50%;
+    transform: scale(.1,.1);
+}
+
 @media screen and (max-width:600px) {
     .heas {
         display: grid;
@@ -380,6 +400,9 @@ footer {
         text-shadow: black 1px 1px;
         grid-area: g-logo;
     }
+    .logo-rj {
+        width: 28rem;
+    }
     .burger {
         grid-area: g-burger;
         margin-top: auto;
@@ -391,7 +414,7 @@ footer {
         z-index: 4;
     }
     .burger div {
-        background-color: white;
+        background-image: linear-gradient(to right,#ff791a ,#fa9d5b );
         padding-top: .4rem;
         margin-top: .4rem;
         transition: .5s ease;
