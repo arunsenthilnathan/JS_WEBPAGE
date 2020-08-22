@@ -40,7 +40,7 @@ body {
 }
 
 .logo-rj {
-    width: 20rem;
+    width: 18.8rem;
     padding-left: 3rem;
     transition: all 1s ease;
     opacity: 1;
@@ -136,10 +136,6 @@ body {
 }
 
 .rj {
-    font-size: 3rem;
-    color: white;
-    letter-spacing: .8rem;
-    padding: 1rem;
     opacity: 0;
     transform: translateY(-1rem);
 }
@@ -148,11 +144,14 @@ body {
     font-size: 3rem;
     color: white;
     letter-spacing: .8rem;
-    padding: 1rem;
+    padding: 0;
     transform: translateY(0);
     transition: all .7s ease-in;
     opacity: 1;
     grid-area: g-logo;
+}
+.rj img{
+    width: 25rem;
 }
 
 .message p {
@@ -362,7 +361,7 @@ footer {
         font-size: 2rem;
         color: white;
         letter-spacing: .8rem;
-        padding: 2rem;
+        padding: 0;
         transform: translateY(0);
         transition: all .7s ease-in;
         opacity: 1;
